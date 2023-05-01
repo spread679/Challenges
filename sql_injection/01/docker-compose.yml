@@ -1,0 +1,32 @@
+services:
+  php-apache-environment:
+    container_name: php-apache
+    build:
+      context: ./php
+      dockerfile: Dockerfile
+    depends_on:
+      - host_db
+    volumes:
+      - ./php/src/:/var/www/html/
+    ports:
+      - 8000:80
+  host_db:
+    container_name: host_db
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: pwned
+      MYSQL_DATABASE: db
+    ports:
+      - 9906:3306
+    volumes:
+      - ./scripts:/docker-entrypoint-initdb.d  
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    depends_on:
+      - host_db
+    environment:
+      PMA_HOST: host_db
+    ports:
+      - 8080:80

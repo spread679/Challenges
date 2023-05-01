@@ -1,0 +1,99 @@
+* { margin: 0; padding: 0; }
+
+@font-face {
+    font-family: 'TitilliumWeb-Regular';
+    src: url(../font/TitilliumWeb-Regular.ttf);
+}
+@font-face {
+    font-family: 'TitilliumWeb-Bold';
+    src: url(../font/TitilliumWeb-Bold.ttf);
+}
+
+#background-container {
+    min-width: 1200px;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#title {
+    font-family: 'TitilliumWeb-Bold';
+    margin: 50px 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#buttons-container {
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    margin: 0 auto;
+}
+
+#buttons-container button {
+    font-family: 'TitilliumWeb-Regular';
+    padding: 10px;
+    margin: 10px;
+    color: black;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+#buttons-container button:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    background-color: #f0f2f1;
+}
+
+#secondary-title {
+    font-family: 'TitilliumWeb-Bold';
+    margin: 50px 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#dynamic-div {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    width: 500px;
+    margin: 0 auto;
+    background-color: #f0f2f1;
+    padding: 50px 25px;
+    border-radius: 5px;
+}
+
+#dynamic-div div {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+    font-family: 'TitilliumWeb-Regular';
+}
+
+#dynamic-div div label {
+    margin: 0 100px 0 0;
+    font-family: 'TitilliumWeb-Regular';
+}
+
+#dynamic-div div input {
+    width: 190px;
+    padding: 5px;
+}
+
+#send-button {
+    width: 130px;
+    padding: 10px;
+    margin: 50px auto 0;
+}
+
+#send-button:hover {
+    cursor: pointer;
+}
+
+#my-form-status {
+    font-family: 'TitilliumWeb-Regular';
+    margin: 30px 0;
+}
